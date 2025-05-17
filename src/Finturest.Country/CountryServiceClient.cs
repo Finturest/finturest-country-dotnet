@@ -26,7 +26,7 @@ public class CountryServiceClient : ICountryServiceClient
         _jsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
     }
 
-    public async Task<IReadOnlyList<Abstractions.Models.CountryModel>> GetCountriesAsync(CancellationToken cancellationToken = default)
+    public async Task<IReadOnlyList<CountryModel>> GetCountriesAsync(CancellationToken cancellationToken = default)
     {
         var uri = $"{RouteConstants.V1}/{RouteConstants.Countries}";
 

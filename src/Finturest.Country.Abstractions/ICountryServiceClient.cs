@@ -1,4 +1,6 @@
-﻿namespace Finturest.Country.Abstractions;
+﻿using Finturest.Country.Abstractions.Models;
+
+namespace Finturest.Country.Abstractions;
 
 /// <summary>
 /// Provides methods for sending requests to and receiving responses from the Finturest Country API.
@@ -12,5 +14,5 @@ public interface ICountryServiceClient
     /// <exception cref="ArgumentNullException">The request model was null.</exception>
     /// <exception cref="InvalidOperationException">The request failed due to deserialization issue.</exception>
     /// <exception cref="HttpRequestException">The request failed due to an underlying issue such as network connectivity, DNS failure, server certificate validation or timeout.</exception>
-    Task<IReadOnlyList<Models.CountryModel>> GetCountriesAsync(CancellationToken cancellationToken = default);
+    Task<IReadOnlyList<CountryModel>> GetCountriesAsync(CancellationToken cancellationToken = default);
 }
