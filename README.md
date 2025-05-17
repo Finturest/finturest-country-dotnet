@@ -10,7 +10,7 @@ This SDK offers seamless integration with the Finturest Country API, enabling ac
 
 ## Features
 
-- **Global Coverage**: Provides information on all 250+ countries and territories worldwide.
+- **Global Coverage**: Provides information on all 249 countries and territories worldwide.
 
 - **Standardized Country Codes**: Supports ISO 3166-1 alpha-2, alpha-3, and numeric codes.
 
