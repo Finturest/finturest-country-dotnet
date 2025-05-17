@@ -5,7 +5,7 @@ namespace Finturest.Country.Abstractions.Models;
 /// <summary>
 /// Represents a geopolitical or economic regional block, such as the European Union or African Union.
 /// </summary>
-public record RegionalBlock
+public record RegionalBlockModel
 {
     /// <summary>
     /// A required short identifier for the regional block, typically an official abbreviation (e.g., EU, EFTA).

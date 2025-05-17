@@ -3,7 +3,7 @@
 /// <summary>
 /// Represents a regional block based on the UN M49 standard used for statistical and classification purposes.
 /// </summary>
-public record RegionApiModel
+public record RegionModel
 {
     /// <summary>
     /// A required identifier for the regional block, as defined by the UN M49 standard.

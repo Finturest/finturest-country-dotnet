@@ -1,9 +1,9 @@
 ﻿namespace Finturest.Country.Abstractions.Models;
 
 /// <summary>
-/// Represents a language and its associated metadata including ISO codes and relevant countries.
+/// Represents basic identifying information for a language, including its English and native names, and ISO codes.
 /// </summary>
-public record LanguageApiModel
+public record LanguageBasic
 {
     /// <summary>
     /// The English name of the language (e.g., "Spanish", "French").
@@ -40,9 +40,4 @@ public record LanguageApiModel
 #else
     public string Iso6392Code { get; set; } = null!;
 #endif
-
-    /// <summary>
-    /// A list of countries where this language is officially or commonly used.
-    /// </summary>
-    public IReadOnlyList<CountryBasicApiModel> Countries { get; set; } = [];
 }

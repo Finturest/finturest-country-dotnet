@@ -3,7 +3,7 @@
 /// <summary>
 /// Country in ISO 3166 standard.
 /// </summary>
-public record CountryApiModel
+public record CountryModel
 {
     /// <summary>
     /// The official country name as defined by ISO 3166-1.
@@ -81,27 +81,27 @@ public record CountryApiModel
     /// The macro geographical (continental) region as classified by UN M49, if available.
     /// </summary>
 #if NET7_0_OR_GREATER
-    public RegionApiModel? Region { get; init; }
+    public RegionModel? Region { get; init; }
 #else
-    public RegionApiModel? Region { get; set; }
+    public RegionModel? Region { get; set; }
 #endif
 
     /// <summary>
     /// The subregional classification from UN M49, if available.
     /// </summary>
 #if NET7_0_OR_GREATER
-    public RegionApiModel? Subregion { get; init; }
+    public RegionModel? Subregion { get; init; }
 #else
-    public RegionApiModel? Subregion { get; set; }
+    public RegionModel? Subregion { get; set; }
 #endif
 
     /// <summary>
     /// The intermediate region classification from UN M49, if applicable.
     /// </summary>
 #if NET7_0_OR_GREATER
-    public RegionApiModel? IntermediateRegion { get; init; }
+    public RegionModel? IntermediateRegion { get; init; }
 #else
-    public RegionApiModel? IntermediateRegion { get; set; }
+    public RegionModel? IntermediateRegion { get; set; }
 #endif
 
     /// <summary>
@@ -118,24 +118,24 @@ public record CountryApiModel
     /// A list of currencies officially used in the country.
     /// </summary>
 #if NET7_0_OR_GREATER
-    public IReadOnlyList<CurrencyBasicApiModel> Currencies { get; init; } = [];
+    public IReadOnlyList<CurrencyBasicModel> Currencies { get; init; } = [];
 #else
-    public IReadOnlyList<CurrencyBasicApiModel> Currencies { get; set; } = [];
+    public IReadOnlyList<CurrencyBasicModel> Currencies { get; set; } = [];
 #endif
 
     /// <summary>
     /// Contains URLs to the country’s official flag images in SVG and PNG formats.
     /// </summary>
 #if NET7_0_OR_GREATER
-    public required CountryFlagApiModel Flag { get; init; }
+    public required CountryFlagModel Flag { get; init; }
 #else
-    public CountryFlagApiModel Flag { get; set; } = null!;
+    public CountryFlagModel Flag { get; set; } = null!;
 #endif
 
     /// <summary>
     /// A list of languages officially or commonly spoken in the country.
     /// </summary>
-    public IReadOnlyList<LanguageBasicApiModel> Languages { get; set; } = [];
+    public IReadOnlyList<LanguageBasic> Languages { get; set; } = [];
 
     /// <summary>
     /// A list of IANA timezones applicable to the country.

@@ -14,5 +14,5 @@ public interface ICountryServiceClient
     /// <exception cref="ArgumentNullException">The request model was null.</exception>
     /// <exception cref="InvalidOperationException">The request failed due to deserialization issue.</exception>
     /// <exception cref="HttpRequestException">The request failed due to an underlying issue such as network connectivity, DNS failure, server certificate validation or timeout.</exception>
-    Task<IReadOnlyList<CountryApiModel>> GetCountriesAsync(CancellationToken cancellationToken = default);
+    Task<IReadOnlyList<Models.CountryModel>> GetCountriesAsync(CancellationToken cancellationToken = default);
 }

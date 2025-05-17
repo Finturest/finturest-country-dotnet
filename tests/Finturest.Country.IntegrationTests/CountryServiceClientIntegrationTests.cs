@@ -96,10 +96,10 @@ public class CountryServiceClientIntegrationTests
             country.Flag.Images.ShouldNotBeEmpty();
             country.Flag.Images.Count.ShouldBe(2);
 
-            country.Flag.Images[0].Format.ShouldBe(ApiFileFormat.SVG);
+            country.Flag.Images[0].Format.ShouldBe(FileFormat.SVG);
             country.Flag.Images[0].Url.ShouldNotBeNullOrEmpty();
 
-            country.Flag.Images[1].Format.ShouldBe(ApiFileFormat.PNG);
+            country.Flag.Images[1].Format.ShouldBe(FileFormat.PNG);
             country.Flag.Images[1].Url.ShouldNotBeNullOrEmpty();
 
             foreach (var language in country.Languages)

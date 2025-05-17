@@ -1,14 +1,14 @@
 ﻿namespace Finturest.Country.Abstractions.Models;
 
 /// <summary>
-/// Represents a currency in compliance with the ISO 4217 standard.
+/// Currency in ISO 4217 standard.
 /// </summary>
-public record CurrencyApiModel
+public record CurrencyBasicModel
 {
     /// <summary>
-    /// A required three-letter alphabetic currency code defined by ISO 4217.
-    /// The first two letters are derived from the country code (ISO 3166), 
-    /// and the third letter corresponds to the initial of the currency name, where possible.
+    /// The alphabetic code is based on another ISO standard, ISO 3166, which lists the codes for country names.
+    /// The first two letters of the ISO 4217 three-letter code are the same as the code for the country name,
+    /// and, where possible, the third letter corresponds to the first letter of the currency name.
     /// </summary>
 #if NET7_0_OR_GREATER
     public required string Code { get; init; }
@@ -17,7 +17,7 @@ public record CurrencyApiModel
 #endif
 
     /// <summary>
-    /// The full name of the currency (e.g., "Euro", "United States Dollar").
+    /// The full name of the currency (e.g., "United States Dollar").
     /// </summary>
 #if NET7_0_OR_GREATER
     public required string Name { get; init; }
@@ -26,8 +26,8 @@ public record CurrencyApiModel
 #endif
 
     /// <summary>
-    /// A required three-digit numeric code defined by ISO 4217.
-    /// It is particularly useful in systems that do not use Latin scripts or where numeric representation is preferred.
+    /// The three-digit numeric code is useful when currency codes need to be understood in countries that do not use Latin scripts
+    /// and for computerized systems. Where possible, the three-digit numeric code is the same as the numeric country code.
     /// </summary>
 #if NET7_0_OR_GREATER
     public required string NumericCode { get; init; }
@@ -52,9 +52,4 @@ public record CurrencyApiModel
 #else
     public int? MinorUnit { get; set; }
 #endif
-
-    /// <summary>
-    /// A list of associated countries where the currency is used.
-    /// </summary>
-    public IReadOnlyList<CountryBasicApiModel> Countries { get; set; } = [];
 }

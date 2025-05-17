@@ -1,6 +1,6 @@
 ﻿namespace Finturest.Country.Abstractions.Models.Enums;
 
-public enum ApiFileFormat
+public enum FileFormat
 {
     SVG = 0,
     PNG = 1

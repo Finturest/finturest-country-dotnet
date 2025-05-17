@@ -26,7 +26,7 @@ public class CountryServiceClient : ICountryServiceClient
         _jsonSerializerOptions.Converters.Add(new JsonStringEnumConverter());
     }
 
-    public async Task<IReadOnlyList<CountryApiModel>> GetCountriesAsync(CancellationToken cancellationToken = default)
+    public async Task<IReadOnlyList<Abstractions.Models.CountryModel>> GetCountriesAsync(CancellationToken cancellationToken = default)
     {
         var uri = $"{RouteConstants.V1}/{RouteConstants.Countries}";
 
@@ -34,6 +34,6 @@ public class CountryServiceClient : ICountryServiceClient
 
         response.EnsureSuccessStatusCode();
 
-        return await response.Content.ReadFromJsonAsync<IReadOnlyList<CountryApiModel>>(_jsonSerializerOptions, cancellationToken).ConfigureAwait(false) ?? throw new InvalidOperationException("Failed to deserialize response.");
+        return await response.Content.ReadFromJsonAsync<IReadOnlyList<CountryModel>>(_jsonSerializerOptions, cancellationToken).ConfigureAwait(false) ?? throw new InvalidOperationException("Failed to deserialize response.");
     }
 }

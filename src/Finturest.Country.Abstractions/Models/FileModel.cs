@@ -5,15 +5,15 @@ namespace Finturest.Country.Abstractions.Models;
 /// <summary>
 /// Represents metadata for a downloadable or accessible file, including its format and URL.
 /// </summary>
-public record FileApiModel
+public record FileModel
 {
     /// <summary>
     /// An enumeration representing the file format (e.g., SVG, PNG).
     /// </summary>
 #if NET7_0_OR_GREATER
-    public required ApiFileFormat Format { get; init; }
+    public required FileFormat Format { get; init; }
 #else
-    public ApiFileFormat Format { get; set; }
+    public FileFormat Format { get; set; }
 #endif
 
     /// <summary>

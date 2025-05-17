@@ -3,7 +3,7 @@
 /// <summary>
 /// Represents the basic identifying information for a country, compliant with ISO 3166-1 standards.
 /// </summary>
-public record CountryBasicApiModel
+public record CountryBasicModel
 {
     /// <summary>
     /// The official country name as defined by ISO 3166-1.
