@@ -1,6 +1,4 @@
-﻿using System.ComponentModel;
-
-namespace Finturest.Country.Abstractions.Models;
+﻿namespace Finturest.Country.Abstractions.Models;
 
 /// <summary>
 /// Represents a geopolitical or economic regional block, such as the European Union or African Union.

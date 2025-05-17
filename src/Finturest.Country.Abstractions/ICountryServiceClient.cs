@@ -1,6 +1,4 @@
-﻿using Finturest.Country.Abstractions.Models;
-
-namespace Finturest.Country.Abstractions;
+﻿namespace Finturest.Country.Abstractions;
 
 /// <summary>
 /// Provides methods for sending requests to and receiving responses from the Finturest Country API.
