@@ -20,6 +20,7 @@ public partial class CountryServiceClientIntegrationTests
             foreach (var country in currency.Countries)
             {
                 country.Name.ShouldNotBeNullOrEmpty();
+                country.LocalName.ShouldNotBeNullOrEmpty();
                 country.Alpha2Code.ShouldNotBeNullOrEmpty();
                 country.Alpha3Code.ShouldNotBeNullOrEmpty();
                 country.NumericCode.ShouldNotBeNullOrEmpty();
