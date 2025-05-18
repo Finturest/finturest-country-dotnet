@@ -1,7 +1,7 @@
 # Finturest Country API C# SDK
 
 [![NuGet](https://img.shields.io/nuget/v/Finturest.Country.svg)](https://www.nuget.org/packages/Finturest.Country)
-![CI](https://github.com/finturest/finturest-country-dotnet/actions/workflows/ci.yml/badge.svg)
+[![CI](https://github.com/Finturest/finturest-country-dotnet/actions/workflows/ci.yml/badge.svg)](https://github.com/Finturest/finturest-country-dotnet/actions/workflows/ci.yml)
 
 Official C# SDK for the [Finturest Country API](https://finturest.com/products/country-api) - supports .NET Standard 2.0+ and all modern .NET versions.
 
