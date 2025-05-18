@@ -1,5 +1,6 @@
 # Finturest Country API C# SDK
 
+[![NuGet](https://img.shields.io/nuget/v/Finturest.Country.svg)](https://www.nuget.org/packages/Finturest.Country)
 ![CI](https://github.com/finturest/finturest-country-dotnet/actions/workflows/ci.yml/badge.svg)
 
 Official C# SDK for the [Finturest Country API](https://finturest.com/products/country-api) - supports .NET Standard 2.0+ and all modern .NET versions.
@@ -10,7 +11,7 @@ This SDK offers seamless integration with the Finturest Country API, enabling ac
 
 ## Features
 
-- **Global Coverage**: Provides information on all 250+ countries and territories worldwide.
+- **Global Coverage**: Provides information on all 249 countries and territories worldwide.
 
 - **Standardized Country Codes**: Supports ISO 3166-1 alpha-2, alpha-3, and numeric codes.
 
